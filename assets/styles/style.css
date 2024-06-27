@@ -58,7 +58,7 @@ header {
     display: flex;
     height: 400px;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .header__section-1 {
