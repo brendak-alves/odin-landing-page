@@ -54,7 +54,8 @@ header {
 }
 
 .header__sections__container {
-    border-bottom: 1px solid #94c746;
+    border-bottom: 1.5px solid transparent;
+    border-image: url(/assets/img/horizontal-line.png) 1 stretch;
     display: flex;
     height: 400px;
     justify-content: center;
@@ -82,14 +83,19 @@ header {
 
 .header__section-1__button {
     box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.253);
-    background-color: #3882f6;
+    background-image: linear-gradient(to left, #94c746, #7fac3c);
     border: 0;
     border-radius: 5px;
     color: #fff;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 16px;
     margin-top: 50px;
     padding: 10px;
-    width: 100px;
+    width: 150px;
+}
+
+.header__section-1__button:hover {
+    background-color: #93c746a2;
 }
 
 .header__section-2 {
@@ -154,6 +160,7 @@ header {
     padding: 100px;
     width: 100vw;
     height: 400px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.295);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,6 +186,7 @@ header {
 
 footer {
     display: flex;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.295);
     background-color: #f9faf8;
     width: 100vw;
     height: 350px;
@@ -188,40 +196,36 @@ footer {
 
 .footer__container {
     color: #f9faf8;
-    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.171);
     border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);
     background-color: #3882f6;
     width: 1400px;
     height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    gap: 200px;
 }
 
-.footer__container > h3 {
-    margin-left: -350px;
-    align-self: center;
+.footer__container > a > button {
+    font-size: 20px;
+    font-weight: bold;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.192);
+    background-color: #3882f6;
+    color: #f9faf8;
+    border: 2px solid #fff;
+    padding: 10px;
 }
 
 .footer__itens {
-    width: 1000px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer__itens > p {
     margin-top: 10px;
     font-size: 15px;
-}
-
-.footer__itens > button {
-    font-size: 20px;
-    margin-top: -15px;
-    font-weight: bold;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #3882f6;
-    color: #f9faf8;
-    border: 2px solid white;
 }
