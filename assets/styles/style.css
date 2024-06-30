@@ -11,13 +11,20 @@ body {
 }
 nav.nav-bar {
     align-items: center;
-    background-color: #1f2937;
     color: #f9faf8;
     display: flex;
     height: 100px;
     justify-content: space-between;
     padding-top: 80px;
     width: 100vw;
+
+    background: linear-gradient(
+        to left,
+        #1f2937c9,
+        #1f2937ea,
+        #1f2937,
+        #1f2937
+    );
 }
 
 .nav-bar__hero {
@@ -43,21 +50,25 @@ nav > ul > li {
 }
 
 .list__item--link {
-    color: #f9faf89d;
+    color: #fff;
     text-decoration: none;
 }
 
 header {
-    background-color: #1f2937;
     padding: 70px 150px;
     width: 100vw;
+    background: linear-gradient(
+        to left,
+        #1f2937c9,
+        #1f2937ea,
+        #1f2937,
+        #1f2937
+    );
 }
 
-.header__sections__container {
-    border-bottom: 1.5px solid transparent;
-    border-image: url('/assets/img/horizontal-line.png') 1 stretch;
+.header__sections__container > img {
     display: flex;
-    height: 400px;
+    height: 2px;
     justify-content: center;
     width: 100%;
 }
@@ -69,7 +80,7 @@ header {
     height: 400px;
     justify-content: center;
     padding: 100px 150px 150px 150px;
-    width: 50%;
+    width: 65%;
 }
 
 .header__title {
@@ -91,11 +102,7 @@ header {
     font-weight: 500;
     margin-top: 50px;
     padding: 10px;
-    width: 150px;
-}
-
-.header__section-1__button:hover {
-    background-color: #93c746a2;
+    width: 200px;
 }
 
 .header__section-2 {
@@ -111,6 +118,7 @@ header {
 
 .main__sections__container {
     align-items: center;
+    background: linear-gradient(to left, #1f293738, #f6ffe84f, #1f293738);
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -118,41 +126,81 @@ header {
 }
 
 .main__section-1 {
-    color: #1f2937;
-    font-size: 25px;
-    font-weight: bolder;
-    padding: 60px 0px 60px 0px;
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    padding: 100px 0px 60px 0px;
+    width: 100%;
+}
+
+.main__section-1 > h2 {
+    animation: cursor 0.8s step-end infinite, typing 3s steps(35, end) infinite;
+    border-right: 10px solid #94c746;
+    color: #1f2937c5;
+    font-family: monospace;
+    font-size: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes cursor {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 52%;
+    }
 }
 
 .main__section-2 {
+    align-items: center;
     display: flex;
-    height: 430px;
-    justify-content: space-between;
-    width: 1300px;
+    gap: 50px;
+    height: 500px;
+    justify-content: center;
+    width: 100%;
 }
 
 .card {
-    background-color: #1f2937;
-    border: 4px solid #94c746;
-    border-radius: 10px;
-    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.212);
+    align-items: center;
+    background: #ffffff28;
+    border-radius: 5px;
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.37);
     display: flex;
     flex-direction: column;
-    height: 325px;
+    gap: 20px;
+    height: 300px;
+    justify-content: center;
+    padding: 80px 10px 50px 10px;
     width: 300px;
+
+    /* border: 10px double #1f2937; */
 }
 
+/* .card:first-child {
+    box-shadow: none;
+} */
 .card > img {
     align-self: center;
-    height: 133px;
-    margin-top: 15px;
-    width: 200px;
+    border: 2px solid #c0c0c0;
+    border-radius: 5%;
+    box-shadow: 5px 10px 10px #1f2937;
+    height: 150px;
+    width: 190px;
 }
-.card > p {
-    color: #f9faf8;
-    font-size: 14px;
-    margin-top: 20px;
-    padding: 20px;
+.card > h3 {
+    border-left: 2px solid #1f293759;
+    color: #1f2937;
+    font-size: 13px;
+    height: 100px;
+    padding: 10px 30px;
     text-align: justify;
 }
 
@@ -181,12 +229,11 @@ header {
     margin-top: 60px;
     text-align: right;
     width: 800px;
-
-    /* align-self: flex-end; */
 }
 
 footer {
     align-items: center;
+    background: linear-gradient(to left, #1f293738, #f6ffe84f, #1f293738);
     background-color: #f9faf8;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.295);
     display: flex;
@@ -197,7 +244,7 @@ footer {
 
 .footer__container {
     align-items: center;
-    background-color: #3882f6;
+    background-color: #94c746;
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.295);
     color: #f9faf8;
@@ -209,7 +256,7 @@ footer {
 }
 
 .footer__container > a > button {
-    background-color: #3882f6;
+    background-color: #94c746;
     border: 2px solid #fff;
     border-radius: 10px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.192);
